@@ -9,11 +9,13 @@ package oop_8_fibongto;
  *
  * @author Thu Uyên
  */
-public class OOP_8_fiBongto {
-
-    
+public class Main {
     public static void main(String[] args) {
-        
+        Fibo_Ngto fn = new Fibo_Ngto();
+        fn.nhap();
+        System.out.println(" các số Fibonaci nhỏ hơn n là số nguyên tố là: ");
+        fn.fiBo_ngTo();
+        System.out.println("");
     }
     
 }
