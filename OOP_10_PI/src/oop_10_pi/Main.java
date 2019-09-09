@@ -15,19 +15,26 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    
-    public static float pI(int n){
-        float temp = 0;
-        for(int i = 0;i<=n;i++){
-            temp += (float)(Math.pow(-1, i)/(2*i+1));
+    public static void CalPi(double ep){
+        double value=1;
+        int i=1;
+        double a=1.0/3.0;
+        int sign=-1;
+        while(a>ep){
+            value+=sign*a;
+            i++;
+            a=1.0/(2*i+1);
+            sign=-sign;
         }
-        return temp*4;
-    }
+        value=value*4;
+        System.out.println("Pi:"+value);
+        }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhập n: ");
-        int n = sc.nextInt();
-        System.out.println("PI = " + pI(n));
+        double ep;
+        System.out.print("Nhập ep: ");
+        ep = Double.parseDouble(sc.nextLine());
+        CalPi(ep);
         
     }
     
