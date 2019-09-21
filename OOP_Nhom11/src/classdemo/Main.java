@@ -3,22 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testjson;
-
-import com.google.gson.Gson;
+package classdemo;
 
 /**
  *
  * @author Thu Uyên
  */
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Gson gson = new Gson();
-//        gson.toJson();
+        Outer o1 = new Outer("Outer class");
+        System.out.println(o1.getName());
+        Outer.Inner i1 = o1.new Inner(12);
+        System.out.println(i1.getNumber());
     }
-    
 }
