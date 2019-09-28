@@ -6,6 +6,8 @@
 package oop_q3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -154,5 +156,37 @@ public class QLTV {
         System.out.println(ar.get(i)+": "+count );
 
         }
+       
     }
+    //string
+     public void sortByTenNXB(){
+         Collections.sort(list, new Comparator<TaiLieu>(){
+             @Override
+             public int compare(TaiLieu o1, TaiLieu o2) {
+                   return o1.getTenNhaXb().compareTo(o2.getTenNhaXb());
+             }
+             
+         });
+     }
+     //int
+     public void sortBySoBH(){
+         Collections.sort(list, new Comparator<TaiLieu>(){
+             @Override
+             public int compare(TaiLieu o1, TaiLieu o2) {
+                 return o1.getSoBanPhatHang()-o2.getSoBanPhatHang();
+             }
+             
+         });
+     }
+     public void sortBy2ThuocTinh(){
+         Collections.sort(list,new Comparator<TaiLieu>() {
+             @Override
+             public int compare(TaiLieu o1, TaiLieu o2) {
+                 if(o1.getMaTaiLieu().equalsIgnoreCase(o2.getMaTaiLieu())){
+                     return o2.getSoBanPhatHang()-o1.getSoBanPhatHang();
+                 }
+                 else return o1.getMaTaiLieu().compareTo(o2.getMaTaiLieu());
+             }
+         });
+     }
 }

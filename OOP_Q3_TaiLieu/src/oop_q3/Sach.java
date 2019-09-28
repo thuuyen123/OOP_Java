@@ -9,7 +9,7 @@ package oop_q3;
  *
  * @author Thu Uyên
  */
-public class Sach extends TaiLieu{
+public class Sach extends TaiLieu implements CaiDai{
     private String tentg, tenS;
     private int strang;
 
@@ -49,6 +49,10 @@ public class Sach extends TaiLieu{
 
     public String toString() {
         return super.getMaTaiLieu()+"\t"+tenS+"\t"+tentg +"\t"+super.getTenNhaXb()+"\t"+strang+"\t"+super.getSoBanPhatHang();
+    }
+    @Override
+    public String getTenNxb(){
+        return null;
     }
     
 }

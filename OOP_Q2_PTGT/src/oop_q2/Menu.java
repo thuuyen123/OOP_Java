@@ -32,6 +32,12 @@ public class Menu {
             System.out.println("10. Tim xe theo gia ban");
             System.out.println("11. Tim xe theo so cho ngoi");
             System.out.println("12. Tim xe trong khoang gia ban");
+            System.out.println("13.Thong ke theo mau sac");
+            System.out.println("14.Thong ke theo nam sx");
+            System.out.println("15.Sx theo hang sx");
+            System.out.println("16.Sx theo mau sac");
+            System.out.println("17.Sx theo nam sx");
+            System.out.println("18.Sx theo hang sx va mau sac");
             System.out.println("0. Exit");
             System.out.print("Moi chon: ");
             int chon;
@@ -85,10 +91,30 @@ public class Menu {
                     double giaMax = Double.parseDouble(sc.nextLine());
                     ql.timXeTheoKhoangGia(giaMin, giaMax);
                     break;
-                    
-                
+                case 13:
+                    ql.thongKeTheoMausac();
+                    break;
+                case 14:
+                    ql.thongKeTheoNamSx();
+                    break;
+                case 15:
+                    ql.sortByHangSx();
+                   ql.hienThiFull();
+                    break;
+                case 16:
+                    ql.sortByMauSac();
+                    ql.hienThiFull();
+                    break;
+                case 17:
+                    ql.sortByNamsx();
+                    ql.hienThiFull();
+                    break;
+                case 18:
+                    ql.sortByHangsxAndMauSac();
+                    ql.hienThiFull();
+                    break;
                 default:
-                    System.out.println("chi chon 0->12");
+                    System.out.println("chi chon 0->18");
             }
             if(chon==0) break;
         }

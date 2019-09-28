@@ -24,7 +24,9 @@ public class Menu {
                 System.out.println("3.Viet ra danh sach");
                 System.out.println("4.Xoa");
                 System.out.println("5.Sua");
-                System.out.println("6.thong ke theo ten nxb");
+                System.out.println("6.thong ke theo ten nxb");//max, min, tong , dem, trung binh
+                System.out.println("7.Sap xep theo ten nxb");
+                System.out.println("");
                 System.out.print("Bạn chọn: ");
                 choice = Integer.parseInt(sc.nextLine());
                 switch(choice){
@@ -47,6 +49,8 @@ public class Menu {
                      case 6:
                          ql.thongkeTenNhaXb();
                          break;
+                     case 7:
+                         ql.sortByTenNXB();
                     default: System.out.println("CHon sai CHon lai");
                 }
             if(choice==0) break;

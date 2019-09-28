@@ -6,6 +6,9 @@
 package oop_q2;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -20,7 +23,13 @@ public class QLPTGL {
         list = new ArrayList<>();
         sc = new Scanner(System.in);
         listOto = new ArrayList<>();
-
+        list.add(new XeMay("dsss32", 1999, "xanh", 10000000, 2110));
+        list.add(new XeMay("dsss42", 1922, "do", 10000000, 2110));
+        list.add(new XeMay("dsss32", 1999, "tim", 10000000, 2110));
+        list.add(new XeTai("dttt21", 2000, "do", 2999900, 123));
+        list.add(new XeTai("dttt23", 2002, "xanh", 2999900, 133));
+        list.add(new XeTai("dttt22", 2001, "tim", 4000000, 111));
+        list.add(new OTo("oooo34", 1997, "vang", 1000000, "dot trong", 12));
     }
     public PTGT nhap(){
         PTGT p = null;
@@ -105,6 +114,12 @@ public class QLPTGL {
             }
         }
         System.out.println("So xe tai la: "+ dem);
+    }
+    public void hienThiFull(){
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i).toString());
+            
+        }
     }
     public int timKiemTheoHang(String hang){
         for (int i = 0; i < list.size(); i++) {
@@ -211,5 +226,83 @@ public class QLPTGL {
             }
         }
         if(temp==0) System.out.println("Ko co!");
+     }
+     private ArrayList<String> getTheoMausac(){
+         HashSet<String> hs = new HashSet<>();
+         for (int i = 0; i < list.size(); i++) {
+             hs.add(list.get(i).getMau());
+             
+         }
+         return new ArrayList<>(hs);
+     }
+     public void thongKeTheoMausac(){
+         ArrayList<String> ar = getTheoMausac();
+         int dem=0;
+         for (int i = 0; i < ar.size(); i++) {
+             dem=0;
+             for (int j = 0; j < list.size(); j++) {
+                 if(list.get(j).getMau().equalsIgnoreCase(ar.get(i))){
+                     dem++;
+                 }
+             }  
+             System.out.println(ar.get(i)+": "+ dem);   
+         }
+     }
+     private ArrayList<Integer> getTheoNamsx(){
+         HashSet<Integer> hs = new HashSet<>();
+         for (int i = 0; i < list.size(); i++) {
+             hs.add(list.get(i).getNamsx());
+         }
+         return new ArrayList<>(hs);
+     }
+     public void thongKeTheoNamSx(){
+         int dem=0;
+         ArrayList<Integer> ar = getTheoNamsx();
+         for (int i = 0; i < ar.size(); i++) {
+             dem=0;
+             for (int j = 0; j < list.size(); j++) {
+                 if(list.get(j).getNamsx() == ar.get(i)) {
+                     dem++;
+                 }
+             }
+             System.out.println(ar.get(i)+": "+ dem);
+         }
+     }
+     public void sortByHangSx(){
+         Collections.sort(list, new Comparator<PTGT>(){
+             @Override
+             public int compare(PTGT o1, PTGT o2) {
+                 return o1.getHangsx().compareTo(o2.getHangsx());
+             }
+        });
+     }
+     public void sortByMauSac(){
+         Collections.sort(list, new Comparator<PTGT>(){
+             @Override
+             public int compare(PTGT o1, PTGT o2) {
+                 return o1.getMau().compareTo(o2.getMau());
+             }
+             
+         });
+     }
+     public void sortByNamsx(){
+         Collections.sort(list, new Comparator<PTGT>(){
+             @Override
+             public int compare(PTGT o1, PTGT o2) {
+                 return o1.getNamsx()-o2.getNamsx();
+             }
+             
+         });
+     }
+     public void sortByHangsxAndMauSac(){
+         Collections.sort(list, new Comparator<PTGT>(){
+             @Override
+             public int compare(PTGT o1, PTGT o2) {
+                 if(o1.getHangsx().equalsIgnoreCase(o2.getHangsx()))
+                     return o1.getNamsx()-o2.getNamsx();
+                 else return o1.getHangsx().compareTo(o2.getHangsx());
+             }
+         
+        });
      }
 }

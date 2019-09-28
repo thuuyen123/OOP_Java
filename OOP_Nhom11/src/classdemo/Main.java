@@ -7,13 +7,14 @@ package classdemo;
 
 /**
  *
- * @author Thu Uyên
+ * @author ADMIN
  */
 public class Main {
     public static void main(String[] args) {
-        Outer o1 = new Outer("Outer class");
+        Outer o1=new Outer("Outer class");
         System.out.println(o1.getName());
-        Outer.Inner i1 = o1.new Inner(12);
-        System.out.println(i1.getNumber());
+        Outer.Inner i1=o1.new Inner(12);
+        System.out.println(i1.getNum());
     }
+    
 }
