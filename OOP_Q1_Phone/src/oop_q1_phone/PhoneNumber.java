@@ -11,12 +11,12 @@ package oop_q1_phone;
  */
 public class PhoneNumber {
     private int mavung;
-    private int sdtnv;
+    private String sdtnv;
 
     public PhoneNumber() {
     }
 
-    public PhoneNumber(int mavung, int sdtnv) {
+    public PhoneNumber(int mavung, String sdtnv) {
         this.mavung = mavung;
         this.sdtnv = sdtnv;
     }
@@ -29,15 +29,15 @@ public class PhoneNumber {
         this.mavung = mavung;
     }
 
-    public int getSdtnv() {
+    public String getSdtnv() {
         return sdtnv;
     }
 
-    public void setSdtnv(int sdtnv) {
+    public void setSdtnv(String sdtnv) {
         this.sdtnv = sdtnv;
     }
-    public String toString(){
-        //return "0"+mavung+"-"+sdtnv;
-        return mavung+"-"+sdtnv;
+    
+    public void display(){
+        System.out.println(mavung+"-"+sdtnv); 
     }
 }

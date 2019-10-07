@@ -208,10 +208,12 @@ public class QLPTGL {
      public void timTheoSoChoNgoi(int soChoNgoi){//bi sai
         int temp=0;
         
-        for (int i = 0; i < listOto.size(); i++) {
-            if( listOto.get(i).getSoChoNgoi() == soChoNgoi){
-                 System.out.println(listOto.get(i));
-                 temp++;
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i) instanceof OTo){
+                if(((OTo)list.get(i)).getSoChoNgoi()==soChoNgoi){
+                    System.out.println(list.get(i));
+                    temp++;
+                }
             }
         }
         if(temp==0) System.out.println("Ko co!");

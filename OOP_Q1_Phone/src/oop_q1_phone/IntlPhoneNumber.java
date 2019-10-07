@@ -10,24 +10,30 @@ package oop_q1_phone;
  * @author Thu Uyên
  */
 public class IntlPhoneNumber extends PhoneNumber{
-    private int maqg;
+    private String maqg;
 
     public IntlPhoneNumber() {
     }
-
-    public IntlPhoneNumber(int maqg, int mavung, int sdtnv) {
+     public IntlPhoneNumber(String maqg) {
+         this.maqg = maqg;
+     }
+    
+    public IntlPhoneNumber(String maqg, int mavung, String sdtnv) {
         super(mavung, sdtnv);
         this.maqg = maqg;
     }
 
-    public int getMaqg() {
+    public String getMaqg() {
         return maqg;
     }
 
-    public void setMaqg(int maqg) {
+    public void setMaqg(String maqg) {
         this.maqg = maqg;
     }
-    public String toString(){
-        return maqg+"-"+super.toString();
+
+    @Override
+    public void display() {
+        System.out.println(maqg +"-"+super.getMavung()+"-"+super.getSdtnv());
     }
+    
 }
