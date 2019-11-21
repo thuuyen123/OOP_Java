@@ -10,6 +10,7 @@ package oop_q3_new;
  * @author Thu Uyên
  */
 public class TaiLieu implements TinhAnPham{
+    private int soAnpham;
     private String ma, tenNxb;
     private int sobph;
 

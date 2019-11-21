@@ -22,6 +22,9 @@ public class QLThuVien {
     private ArrayList<TaiLieu> list;
     private Scanner sc;
 
+    public int getSoAnPham() {
+        return 0;
+    }
     public QLThuVien() {
         list = new ArrayList<>();
         sc = new Scanner(System.in);

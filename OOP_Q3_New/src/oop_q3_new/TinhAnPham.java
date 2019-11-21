@@ -10,5 +10,5 @@ package oop_q3_new;
  * @author Thu Uyên
  */
 public interface TinhAnPham {
-    
+    public int getSoAnPham();
 }

@@ -1,0 +1,3 @@
+a12;mua thu ha noi;45;134.4
+c2;Lap trinh HDT;71;230
+A54;Ky thuat do hoa;100;340

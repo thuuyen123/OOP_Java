@@ -1,0 +1,5 @@
+Tong cua 3 so thuc la: 0.0
+Giai phuong trinh bac hai: 
+PT co 2 nghiem: 
+x1= 6.25
+x2= -18.75

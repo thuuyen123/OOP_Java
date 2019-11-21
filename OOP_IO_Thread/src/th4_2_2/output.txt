@@ -1,0 +1,2 @@
+Tong =135
+Day so nguyen to : 3 5 7 31 7 11 

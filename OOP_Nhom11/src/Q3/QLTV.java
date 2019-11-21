@@ -31,8 +31,7 @@ public class QLTV {
         list.add(new TapChi(31, 12, "TAF431", "Nha Nam", 31));
         list.add(new TapChi(12, 06, "RA115", "Nha Nam", 80));
         list.add(new TapChi(41, 11, "AIP543", "Tuoi Tre", 35));
-//        list.add(new Bao("12/02/2018", "DAS123", "Song Con", 54));
-//        list.add(new Bao("24/06/1999", "KLH987", "Hieu ", 14));
+
 
     }
 

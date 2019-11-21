@@ -1,0 +1,4 @@
+Day thu nhat da duoc sap xep
+Day thu hai chua duoc sap xep
+Day thu hai duoc sap xep lai nhu sau: 
+2 3 9 32 43 112 
