@@ -98,13 +98,13 @@ public class LeftDemo extends javax.swing.JFrame {
         public void run(){
             String st=jLabel1.getText();
             while(true){
-            st=st.substring(1)+st.charAt(0);
-            jLabel1.setText(st);
-            try{
-                sleep(300);
-            }catch(InterruptedException e){
-                System.out.println(e);
-            }
+                st=st.substring(1)+st.charAt(0);
+                jLabel1.setText(st);
+                try{
+                    sleep(300);
+                }catch(InterruptedException e){
+                    System.out.println(e);
+                }
             }
         }
     }

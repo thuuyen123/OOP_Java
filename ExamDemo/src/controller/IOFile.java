@@ -23,9 +23,9 @@ public class IOFile {
                w.writeObject(o1);
              }
              w.close();
-         } catch (IOException e){
+        } catch (IOException e){
              System.out.println(e);
-         }
+        }
     }
     public static void readFile(List ob,String s ){
        ob.clear();

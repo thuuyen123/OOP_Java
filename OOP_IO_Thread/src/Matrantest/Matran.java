@@ -60,13 +60,7 @@ public class Matran {
                 w.print("\n");
 
             }
-//             for (int i = 0; i < m; i++) {
-//                for (int j = 0; j < n; j++) {
-//                    w.print(b[i][j] + " ");
-//                }
-//                w.print("\n");
-//
-//            }
+
             w.close();
         } catch (Exception e) {
             System.out.println(e);

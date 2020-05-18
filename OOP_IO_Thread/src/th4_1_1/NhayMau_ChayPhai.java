@@ -6,8 +6,7 @@
 package th4_1_1;
 
 import java.awt.Color;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *

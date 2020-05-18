@@ -23,8 +23,8 @@ public class DSSach {
         ds = new Sach[100];
     }
 
-    DSSach() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public DSSach() {
+        
     }
     public void nhap(){
         Scanner sc = new Scanner(System.in);

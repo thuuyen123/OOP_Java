@@ -27,7 +27,8 @@ public class OOP_vidu1 {
             System.out.print("Chon: ");
             choice = Integer.parseInt(sc.nextLine());
             switch(choice){
-                
+                case 1 : ds.nhap();
+                            break;
             }
         }
     }

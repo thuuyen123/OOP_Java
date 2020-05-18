@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
-public class FormThread4 extends javax.swing.JFrame {
+public class FormThread4 extends javax.swing.JFrame {//TEXT _ BACKGROUND
     ArrayList<Color> t;
     Thread u;
     boolean isBlink;
@@ -19,16 +19,16 @@ public class FormThread4 extends javax.swing.JFrame {
     }
     
     void updateColors() {
-      t.clear();
-      if(chkRed.isSelected()) t.add(Color.red);
-      if(chkBlue.isSelected()) t.add(Color.blue);
-      if(chkYellow.isSelected()) t.add(Color.yellow);
-      if(chkMagenta.isSelected()) t.add(Color.magenta);
-      if(chkCyan.isSelected()) t.add(Color.cyan);
-      if(chkPink.isSelected()) t.add(Color.pink);
+        t.clear();
+        if(chkRed.isSelected()) t.add(Color.red);
+        if(chkBlue.isSelected()) t.add(Color.blue);
+        if(chkYellow.isSelected()) t.add(Color.yellow);
+        if(chkMagenta.isSelected()) t.add(Color.magenta);
+        if(chkCyan.isSelected()) t.add(Color.cyan);
+        if(chkPink.isSelected()) t.add(Color.pink);
     }
     void initThread() {
-      u = new Thread() {
+        u = new Thread() {
         public void run() {
           while(true) {
             if(!isBlink || t.isEmpty()) {
@@ -44,46 +44,48 @@ public class FormThread4 extends javax.swing.JFrame {
       };  
     }
     int searchColor(Color x) {
-      int n,i; n = t.size();
-      for(i=0;i<n;i++) {
-        Color y = (Color) t.get(i);   
-        if(x == y ) return(i);  
-      }
-      return(-1);
+        int n,i; n = t.size();
+        for(i=0;i<n;i++) {
+          Color y = (Color) t.get(i);   
+          if(x == y ) return(i);  
+        }
+        return(-1);
     }
     void changeColor() {
-      if(t.isEmpty()) return;  
-      int i, k, n;
-      n = t.size();
-      Color x, y;
+        if(t.isEmpty()) return;  
+        int i, k, n;
+        n = t.size();
+        Color x, y;
       
-      if(radForeground.isSelected()) {
-        x = txtA1.getForeground();
-        i = searchColor(x);
-        if(i==-1) {
-          y = (Color) t.get(0);
-          txtA1.setForeground(y);
-         }
-        else {
-          k = (i+1)%n;
-          y = (Color) t.get(k);
-          txtA1.setForeground(y);
-        }
+        if(radForeground.isSelected()) {
+            x = txtA1.getForeground();
+            i = searchColor(x);
+            if(i==-1) {
+              y = (Color) t.get(0);
+              txtA1.setForeground(y);
+             }
+            
+            
+            else {
+              k = (i+1)%n;
+              y = (Color) t.get(k);
+              txtA1.setForeground(y);
+            }
       }
 
-      if(radBackground.isSelected()) {
-        x = txtA1.getBackground();
-        i = searchColor(x);
-        if(i==-1) {
-          y = (Color) t.get(0);
-          txtA1.setBackground(y);
-         }
-        else {
-          k = (i+1)%n;
-          y = (Color) t.get(k);
-          txtA1.setBackground(y);
+        if(radBackground.isSelected()) {
+            x = txtA1.getBackground();
+            i = searchColor(x);
+            if(i==-1) {
+              y = (Color) t.get(0);
+              txtA1.setBackground(y);
+             }
+            else {
+              k = (i+1)%n;
+              y = (Color) t.get(k);
+              txtA1.setBackground(y);
+            }
         }
-      }
       
     } 
     @SuppressWarnings("unchecked")
@@ -112,6 +114,11 @@ public class FormThread4 extends javax.swing.JFrame {
         lblTitle.setText("Text or background blinking between selected colors");
 
         chkRed.setText("Red");
+        chkRed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkRedActionPerformed(evt);
+            }
+        });
 
         chkBlue.setText("Blue");
 
@@ -240,6 +247,10 @@ public class FormThread4 extends javax.swing.JFrame {
     private void btnStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStopActionPerformed
        isBlink = false;
     }//GEN-LAST:event_btnStopActionPerformed
+
+    private void chkRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkRedActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

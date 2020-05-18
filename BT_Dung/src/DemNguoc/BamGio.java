@@ -12,20 +12,13 @@ import javax.swing.JOptionPane;
  * @author Admin
  */
 public class BamGio extends javax.swing.JFrame {
-
-    /**
-     * Creates new form BamGio
-     */
     private HenGio t;
-
     public BamGio() {
         initComponents();
         t = new HenGio();
         t.start();
     }
-
     class HenGio extends Thread {
-
         @Override
         public void run() {
             String text = jLabel1.getText();
@@ -73,7 +66,7 @@ public class BamGio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel1.setText("01:30");
+        jLabel1.setText("0:5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
