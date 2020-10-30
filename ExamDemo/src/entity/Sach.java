@@ -20,6 +20,9 @@ public class Sach implements Serializable{
         this.soLuong = soLuong;
     }
 
+    public Sach() {
+    }
+
     public String getTen() {
         return ten;
     }
